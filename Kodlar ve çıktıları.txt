@@ -1,0 +1,253 @@
+// 1. Kod
+import java.util.Scanner;
+
+public class hazirlik {
+    public static void main (String[]args){
+        Scanner girdi = new Scanner(System.in);
+        System.out.println("Vize sonucunu giriniz");
+        double vize = girdi.nextDouble();
+
+        Scanner girdi2 = new Scanner(System.in);
+        System.out.println("Final notunu giriniz");
+        double finalnotu = girdi2.nextDouble();
+        double ortalama = vize*0.4+finalnotu*0.6;
+
+        if(ortalama<50){
+            System.out.println("Maalesef kaldın. Ortalaman : "+ortalama);
+
+        }else{
+            System.out.println("Tebrikler geçtin. Ortalaman : "+ortalama);
+        }
+
+    }
+}
+// 1. Kod çıktısı :
+Vize sonucunu giriniz
+ 35
+Final notunu giriniz
+50
+Maalesef kaldın. Ortalaman : 44.0
+
+Process finished with exit code 0
+
+// 2. Kod :
+import java.util.Scanner;
+
+public class Odev
+{
+    public static void main (String [] args)
+    {
+        final double pi_sayisi = 3.141593;
+
+        Scanner girdi = new Scanner(System.in);
+
+        System.out.print("Yarı çarp giriniz : ");
+
+        double yaricap1 = girdi.nextDouble();
+
+        double cevre = 2*pi_sayisi*yaricap1;
+
+        System.out.print(yaricap1+"yaricaplı çemberin çevresi: "+cevre+"dir");
+
+    }
+}
+
+// 2. Kod Çıktısı :
+Yarı çarp giriniz : 30
+30.0yaricaplı çemberin çevresi: 188.49558dir
+Process finished with exit code 0
+
+// 3. Kod :
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        int kenar;
+        System.out.print("1 Adet kenar uzunluğu giriniz: ");
+        kenar = scan.nextInt();
+
+        System.out.println(" Karenin alanı = " + (kenar*kenar));
+        System.out.println(" Karenin çevresi = " + (kenar*4));
+    }
+}
+
+// 3. Kod Çıktısı :
+1 Adet kenar uzunluğu giriniz:  15
+ Karenin alanı = 225
+ Karenin çevresi = 60
+
+Process finished with exit code 0
+
+// 4. Kod :
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("1. Sayıyı giriniz: ");
+        int sayi1 = scan.nextInt();
+        System.out.print("2. Sayıyı giriniz: ");
+        int sayi2 = scan.nextInt();
+        System.out.print("3. Sayıyı giriniz: ");
+        int sayi3 = scan.nextInt();
+
+        int enbuyuk = sayi1;
+
+        if(sayi2 > enbuyuk) {
+            enbuyuk = sayi2;
+        }
+        if(sayi3 > enbuyuk) {
+            enbuyuk = sayi3;
+            System.out.println("3 Sayıdan en büyüğü = " + enbuyuk);
+        }
+
+    }
+}
+// 4. Kod Çıktısı :
+1. Sayıyı giriniz: 4
+2. Sayıyı giriniz: 2
+3. Sayıyı giriniz: 11
+3 Sayıdan en büyüğü = 11
+
+Process finished with exit code 0
+
+// 5. Kod
+import java.util.Scanner;
+// bir kasiyerin sattığı ürün başına para kazandığı bir sistem eğer günlük satışı 30 u geçerse kazancı katlanır
+public class Proje5 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner (System.in);
+        int satis , ucret ;
+        System.out.println("Kaç adet satış yapıldı : ");
+        satis= input.nextInt();
+
+        if(satis < 30) {
+            ucret = 20 + satis*2;
+        } else{
+            ucret = 20 + satis*3;
+        }
+        System.out.println("Günlük ücretiniz : "+ ucret +"lira olarak belirlenmiştir");
+    }
+}
+// 5. Kod Çıktısı :
+Kaç adet satış yapıldı : 
+25
+Günlük ücretiniz : 70lira olarak belirlenmiştir
+
+Process finished with exit code 0
+
+// 6. Kod :
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner girdi = new Scanner(System.in);
+        int Sayi1=0;
+        int Sayi2=1;
+        int Sayi3;
+        int i,adim;
+        System.out.print("Kaçıncı adıma kadar gitmek istediğinizi giriniz : ");
+        adim = girdi.nextInt();
+        System.out.print(Sayi1+" "+Sayi2);
+        for(i=2;i<adim;i=i+1)
+        {
+            Sayi3=Sayi1+Sayi2;
+            System.out.print(" "+Sayi3);
+            Sayi1=Sayi2;
+            Sayi2=Sayi3;
+        }
+    }
+}
+// 6. Kod Çıktısı :
+Kaçıncı adıma kadar gitmek istediğinizi giriniz : 10
+0 1 1 2 3 5 8 13 21 34
+Process finished with exit code 0
+
+// 7. Kod :
+public class Main {
+    public static void main(String[] args) {
+        // Stringlerle cümle uzunluğu hesaplama ve istenilen elemanı bulma
+        String mesaj = "Mühendisliği çok seviyorum <3.";
+
+        System.out.println("Eleman sayısı : "+ mesaj.length());
+
+        System.out.println("5. eleman :" + mesaj.charAt(15));
+
+
+    }
+}
+
+// 7. Kod Çıktısı :
+Eleman sayısı : 30
+5. eleman :k
+
+Process finished with exit code 0
+
+// 8. Kod :
+
+public class Main {
+    public static void main(String[] args) {
+        // 1 den istenilen sayıya a kadar tek sayıların toplamını veren bi proje
+        int toplam = 0;
+
+        for(int i =1; i<50;i=i+2){
+            toplam = toplam +i;
+        }
+            System.out.println("Toplam = "+ toplam );
+    }
+}
+// 8. Kod Çıktısı :
+Toplam = 625
+
+Process finished with exit code 0
+
+// 9. Kod :
+public class Main {
+    public static void main(String[] args) {
+        // stringlerle birleştirme , ilk son karakter sorma .
+        String mesaj = "Bugün hava çok güzel.";
+
+        System.out.println(mesaj.concat(" Yaşasın !"));
+
+        System.out.println(mesaj);
+
+       System.out.println(mesaj.startsWith("B"));
+        System.out.println(mesaj.endsWith("."));
+
+    }
+}
+// 9. Kod Çıktısı :
+Bugün hava çok güzel. Yaşasın !
+Bugün hava çok güzel.
+true
+true
+
+Process finished with exit code 0
+
+// 10. Kod :
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Bir sayi giriniz:");
+        int sayi = scan.nextInt();
+
+        if(sayi % 3 == 0) {
+            System.out.println("Girilen sayı 3 ün katıdır");
+        }
+        else {
+            System.out.println("Girilen sayi 3 un katı degildir.");
+            }
+
+    }
+}
+// 10. Kod Çıktısı :
+Bir sayi giriniz:35
+Girilen sayi 3 un katı degildir.
+
+Process finished with exit code 0
